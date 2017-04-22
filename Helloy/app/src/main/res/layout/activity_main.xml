@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop = "10dip">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height = "wrap_content"
+        android:text="성명"
+        android:id="@+id/name"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/name"
+        android:id="@+id/editName"
+        android:layout_marginLeft = "35dip"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gender"
+        android:layout_below ="@+id/name"
+        android:text = "성별"
+        android:paddingTop = "30dip"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radio"
+        android:orientation="horizontal"
+        android:layout_below ="@+id/editName"
+        android:layout_alignLeft = "@+id/editName" >
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "남"
+            android:id="@+id/Mr"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "여"
+            android:id="@+id/Ms"/>
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="수신여부"
+        android:layout_below="@+id/gender"
+        android:layout_marginTop = "20dip"
+        android:id="@+id/spam"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "SMS"
+        android:id="@+id/sms"
+        android:layout_below = "@+id/gender"
+        android:layout_alignLeft = "@+id/editName"
+        android:layout_marginTop = "15dip"
+        />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "e-mail"
+        android:id="@+id/mail"
+        android:layout_below = "@+id/gender"
+        android:layout_toRightOf="@+id/sms"
+        android:layout_marginTop = "15dip"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text ="등록"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/mail"
+        android:id="@+id/button"/>
+
+</RelativeLayout>
